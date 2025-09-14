@@ -1,0 +1,83 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html dir="ltr" lang="ja-JP" id="garakuta-net">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>PCCSトーンチェッカー - garakuta.net</title>
+
+	<meta name="description" content="PCCSトーンをインタラクティブにチェックできます。" />
+	<meta name="keywords" content="PCCS,Design,Color,Coulor" />
+	<meta name="author" content="Takahiro Onodera" />
+	<meta name="copyright" content="Copyright(C) Takahiro Onodera" />
+
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/color/pccs/css/pccs-tc.css">
+
+	<!-- script type="text/javascript" src="http://www.google.com/jsapi"></script -->
+	<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/color/pccs/js/PCCS.js"></script>
+	<script type="text/javascript" src="/color/pccs/js/Sprite.js"></script>
+	<script type="text/javascript" src="/color/pccs/js/init.js"></script>
+	<script type="text/javascript" src="/color/pccs/js/main.js"></script>
+	<script type="text/javascript" src="/color/pccs/js/tooltip.js"></script>
+
+<script language="javascript" type="text/javascript">
+<!--
+//google.load("jquery", "1.4.2");
+$(document).ready(function(){ initialize() });
+// -->
+</script>
+
+</head>
+
+<body><div id="contener">
+
+<!-- ---------- Header ---------- -->
+<div id="pageheader">
+	<a id="a2top" href="/index.html" title="サイトトップへ"><img src="/img/logo01s.gif" alt="GARAKUTA.net" width="256" height="32" /></a>
+</div>
+<h1>PCCSトーンチェッカー</h1>
+
+
+<form id="pccsmenu">
+<fieldset id="fld_sel_figure">
+<legend>図</legend>
+<span class="radio_sel"><input type="radio" name="sel_fig" id="fig_tone"   checked="checked" /><label for="fig_tone"   title="PCCSトーン図">PCCSトーン図</label></span>
+<span class="radio_sel"><input type="radio" name="sel_fig" id="fig_sltone"                   /><label for="fig_sltone" title="S-Lトーングラフ">S-Lトーングラフ</label></span>
+
+<span class="radio_sel"><input type="radio" name="sel_fig" id="fig_coltb"                    /><label for="fig_coltb"  title="カラー一覧表">カラー一覧表</label></span>
+<span class="radio_sel"><input type="radio" name="sel_fig" id="fig_lightness"                /><label for="fig_lightness"  title="明度グラフ">明度グラフ</label></span>
+</fieldset>
+
+<fieldset id="fld_sel_label">
+<legend>色見本</legend>
+
+<span class="radio_sel"><input type="radio" name="sel_labels" id="label_none"                   /><label for="label_none" title="文字なし">文字なし</label></span>
+<span class="radio_sel"><input type="radio" name="sel_labels" id="label_tone" checked="checked" /><label for="label_tone" title="トーン記号">トーン記号</label></span>
+<span class="radio_sel"><input type="radio" name="sel_labels" id="label_ltnes"                  /><label for="label_ltnes" title="明度">明度</label></span>
+<span class="radio_sel"><input type="radio" name="sel_labels" id="label_hueno"                  /><label for="label_hueno" title="色相番号">色相番号</label></span>
+<span class="radio_sel"><input type="radio" name="sel_labels" id="label_nolabel"                /><label for="label_nolabel" title="枠のみ（印刷してペーパーテストに）">枠のみ</label></span>
+
+</fieldset>
+
+<fieldset id="fld_view_switch">
+<legend>表示スイッチ</legend>
+<span class="ckbox_sel"><input type="checkbox" name="ck_tone_p"  id="ck_tone_p"  /><label for="ck_tone_p"  title="p" >p</label></span>
+<span class="ckbox_sel"><input type="checkbox" name="ck_tone_lt" id="ck_tone_lt" /><label for="ck_tone_lt" title="lt">lt</label></span>
+<span class="ckbox_sel"><input type="checkbox" name="ck_tone_s"  id="ck_tone_s"  /><label for="ck_tone_s"  title="s" >s</label></span>
+</fieldset>
+</form>
+
+
+<div id="maincanvas"><div id="canvasbg"></div><div id="canvasheader" style="z-index:1"><b id="canvastitle">PCCSトーン図</b><i>PCCS Tone Checker - GARAKUTA.net</i></div><div id="tonelayer"><div id="dipswpanel" class="clearfix"></div></div></div>
+
+<!-- ---------- Footer ---------- -->
+<div id="pagefooter" style="position:relative"><div id="copyright">&copy; GARAKUTA.net</div></div>
+
+</div></body>
+</html>
