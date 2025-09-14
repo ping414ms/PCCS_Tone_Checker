@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+/*
+	garakuta.net - PCCS color map page css file
+	-------------------------------------------
+
+	(C)garakuta.net / http://www.garakuta.net
+	- version: 1.0
+*/
+
+#contener {
+	color: #000;
+	font: 100% Arial,sans-serif;
+	line-height: 1;
+}
+
+@media print {
+	#pagefooter { display: none; }
+}
+
+
+#maincanvas {
+	position: relative;
+	margin: 2px 20px;
+	padding: 0;
+	width: 900px;
+	height: 600px;
+
+	border: solid 2px #000;
+}
+
+#canvasheader {
+	position: absolute;
+	margin: 0;
+	padding: 4px;
+	top: 0;
+	right: 0;
+
+	color: #999;
+	font: bold 75% "Times New Roman", Times;
+}
+
+#canvastitle {
+	display: block;
+	color: #000;
+	font: bold 125% sans-serif;
+	text-align: right;
+}
+
+#canvasbg {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-color: #fff;
+}
+
+
+#tonelayer {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+
+	z-index:0
+}
+
+.grid {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+
+	color: #999;
+	font: 50% monospace;
+}
+.grid span {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+#dipswpanel {
+	position: absolute;
+	margin: 4px;
+	padding: 4px;
+	bottom: 0;
+	right: 0;
+
+	z-index:1;
+	display: none;
+
+	border: solid 1px #666;
+	background-color: #fffff0;
+}
+
+#dipswpanel .sw {
+	float: left;
+	margin: 2px;
+	padding: 2px;
+	zoom: 1;
+
+	font-size: small;
+	cursor: pointer;
+}
+
+#dipswpanel .sw_on {
+	color: #00c;
+	border: inset 2px #ccc;
+}
+
+#dipswpanel .sw_off {
+	color: #666;
+	border: outset 2px #ccc;
+}
+
+/* form of control-box
+ ---------------------------------------------- */
+@media print {
+	form#pccsmenu {
+		display: none;
+	}
+}
+
+form#pccsmenu {
+	margin: 2px 20px;
+	padding: 0;
+
+	color: #666;
+	font-size: 75%;
+}
+
+form#pccsmenu fieldset {
+	text-align:left;
+	display: inline;
+	border: solid 1px #ccc;
+}
+
+radio_sel {
+	display: inline;
+	vertical-align: middle;
+}
+
+
+/* ===== */
+
+/* Tone
+ ---------------------------------------------- */
+.tone_ckl {
+	position: absolute;
+	margin:0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	text-align: center;
+}
+
+.tone_ckl_BG {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+
+	color: #000;
+	font: bold 100% sans-serif;
+	text-align: center;
+/*	border: solid 1px #f99;		*/
+}
+
+.tone_ckl_BG_Gray {
+	border: dashed 1px #999;
+}
+
+
+/* Color
+ ---------------------------------------------- */
+.col_tag {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+
+	color: #000;
+	font: normal 70% Arial,sans-serif;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.tag_body {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	border-left: solid 1px #666;
+	border-right: solid 1px #666;
+	text-align: center;
+}
+
+.tag_rnd {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.rnd0 {
+	display: block;
+	height: 1px;
+	padding: 0;
+	line-height: 1px;
+	font-size: 1px;
+}
+.rnd1 {
+	margin: 0 2px;
+	padding: 0;
+	border-bottom: solid 1px #666;
+}
+.rnd2 {
+	margin: 0 1px;
+	padding: 0;
+	border-left: solid 1px #666;
+	border-right: solid 1px #666;
+}
+.rnd3 {
+	margin: 0 2px;
+	padding: 0;
+	border-top: solid 1px #666;
+}
+
+
+/* Color ToolTip
+ ---------------------------------------------- */
+#tooltip {
+	position: absolute;
+	display: none;
+
+	margin: 0;
+	padding:10px 15px;
+	width: 180px;
+	top: 0;
+	left: 0;
+
+	color: #000;
+	text-align: left;
+	font-size: 100%;
+
+	background-color: #fff;
+	border: 1px solid #000;
+
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+}
+
+
+#tooltip form {
+	font-size: 100%;
+}
+
+#tooltip input {
+	width: 120px;
+	padding: 0 4px;
+	color: #333;
+	font-family: "Courier New",monospace;
+	border: none;
+}
+
+
+.colsample{
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+}
+.colsample samp {
+	display: block;
+	float: left;
+	width: 64px;
+	height: 32px;
+}
+.colsample dfn {
+	color: #333;
+	font: italic normal 125% "Times New Roman", Times, serif;
+	line-height:32px;
+}
+
+table#ttcolmat {
+	margin: 8px 0 0;
+	padding: 0;
+	width: 100%;
+	border: none;
+}
+
+table#ttcolmat th {
+	color: #999;
+	font: normal 75% Arial,sans-serif;
+	text-align: left;
+	border: none;
+}
+
+table#ttcolmat td {
+	padding: 4px 0 2px 4px;
+	color: #666;
+	font-size: 80%;
+	text-align: left;
+	border: none;
+}
+
+table#ttcolmat td.colsample {
+	width: 64px;
+	height: 32px;
+}
+
+table#ttcolmat td.colname {
+	font-size: 100%;
+	text-align: center;
+}
+
+table#ttcolmat td.params {
+	font-family: "Courier New", monospace;
+}
