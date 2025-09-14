@@ -1,0 +1,170 @@
+@charset "utf-8";
+/*
+	garakuta.net base css file
+	--------------------------
+
+	(C)garakuta.net / http://www.garakuta.net
+	- version: 1.0
+*/
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	height: 100%;
+	line-height: 1;
+
+	color: #333;
+	font-family: 'ＭＳ Ｐゴシック', Helvetica, Arial, sans-serif;
+	font-size: 100.01%;
+	background: #fff;
+}
+
+* html body {
+	font-size: 100.01%;
+	background: none fixed;
+}
+
+*+html body {
+	font-size: 100.01%;
+}
+
+
+/* text_____________________________________________________________________ */
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 1em 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 150%;
+}
+
+h2 {
+	font-size: 125%;
+}
+
+h3 {
+	font-size: 105%;
+}
+
+h4,h5,h6 {
+	font-size: 100%;
+}
+
+pre {
+	font-family: Courie, "MS ゴシック", monospace;
+	font-size: 100%;
+}
+
+code,address {
+	font-family: Courie, "Courie New", monospace;
+	font-style: normal;
+}
+
+
+/* link_____________________________________________________________________ */
+
+a {
+	color: #33d;
+}
+
+a:visited {
+	color: #3dd;
+}
+
+a:active {
+	color: #fc9;
+}
+
+a:hover {
+	color: #c33;
+}
+
+
+/* table ___________________________________________________________________ */
+
+table{
+	border-collapse: collapse;
+	font-size: inherit;
+}
+
+table td,th{
+	border: solid 1px #ccc;
+	padding: 0.2em;
+}
+
+table th {
+	font-size: 95%;
+}
+
+
+/* list_____________________________________________________________________ */
+
+dt {
+	margin: 0 0 8px;
+	padding-left: 8px;
+	font: bold 100% 'ＭＳ Ｐゴシック', Helvetica, Arial, sans-serif;;
+}
+
+dd {
+	margin: 8px 2em;
+	line-height: 1.2em;
+}
+
+li {
+	margin: 4px 2em;
+	line-height: 1.5em;
+}
+
+
+/* image ___________________________________________________________________ */
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+
+/* hacks ___________________________________________________________________ */
+/* .clearfix */
+.clearfix:after	{
+	height: 0;
+	visibility: hidden;
+	content: ".";
+	display: block;
+	clear: both;
+}
+.clearfix{
+	display:inline-block;
+	min-height:1%;  /* for IE 7*/
+}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* IE7 */
+/*
+*:first-child+html div {
+}
+*/
+
+/* IE6 */
+/*
+*html div {
+}
+}/
+
+/* Mac IE */
+
+/* For only mac IE \*//*/
+.....
+/**/
+
